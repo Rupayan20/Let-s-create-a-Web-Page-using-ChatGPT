@@ -1,1 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stylish Responsive Navbar</title>
+  <style>
+    /* Style for the navbar container */
+    .navbar {
+      background-color: #3F51B5; /* Change this to your desired color */
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+    }
 
+    /* Style for the logo */
+    .navbar .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    
+    /* Style for the navigation links */
+    .navbar .links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    
+    .navbar .links li {
+      margin: 0 10px;
+    }
+    
+    .navbar .links a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    /* Style for the hamburger menu button */
+    .navbar .hamburger {
+      display: none; /* hide the hamburger button on large screens */
+      cursor: pointer;
+    }
+    
+    /* Style for the hamburger menu icon */
+    .navbar .hamburger .bar {
+      width: 30px;
+      height: 5px;
+      background-color: white;
+      margin: 5px 0;
+    }
+    
+    /* Media query for small screens */
+    @media (max-width: 768px) {
+      /* Change the flex direction to column on small screens */
+      .navbar {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      /* Show the hamburger button on small screens */
+      .navbar .hamburger {
+        display: block;
+      }
+      
+      /* Hide the navigation links on small screens */
+      .navbar .links {
+        display: none;
+      }
+    }
+  </style>
+
+  <style>
+    /* Style for the hero container */
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1519802772250-a52a9af0eacb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGluZGlhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'); /* change path to your desired image */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    /* Style for the hero heading */
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    /* Style for the hero subheading */
+    .hero p {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    /* Style for the hero button */
+    .hero .cta {
+      background-color: #3F51B5; /* Change this to your desired color */
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    /* Media query for small screens */
+    @media (max-width: 768px) {
+      /* Change the font size of the heading and subheading on small screens */
+      .hero h1 {
+        font-size: 2em;
+      }
+
+      .hero p {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+
+  <style>
+.testimonial-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .testimonial {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+  }
+
+  .avatar {
+    width: 15%;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+  }
+  
+  @media (min-width: 768px) {
+    .testimonial {
+      width: calc(50% - 40px);
+      margin: 0 20px 20px 0;
+    }
+  }
+  </style> 
+
+  <style>
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  label {
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  @media (min-width: 600px) {
+    label {
+      width: 20%;
+      margin-bottom: 0;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 80%;
+    }
+  }
+  </style>
+
+</head>
+
+
+<body>
+<!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="logo">Logo</div>
+    <div class="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+<!-- Hero Section -->
+  <div class="hero">
+    <div class="content">
+      <h1>Welcome to our website</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a href="#" class="cta">Learn More</a>
+    </div>
+</div>
+
+<!-- Testimonial Section -->
+<div class="testimonial-section">
+    <div class="testimonial">
+        <img src="https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyJTIwaW1hZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="testpic1" class="avatar">
+      <p>"This product exceeded my expectations. It's easy to use and has helped me achieve my goals."</p>
+      <h4>- Nilanjana Chatterjee</h4>
+    </div>
+    <div class="testimonial">
+        <img src="https://media.istockphoto.com/id/1226886130/photo/3d-illustration-of-smiling-happy-man-with-laptop-sitting-in-armchair-cartoon-businessman.jpg?b=1&s=170667a&w=0&k=20&c=h7mQtSlTAIpjGzEQb-DZlZ-J3-Zy8KB7KSD218MCVnA=" alt="testpic2" class="avatar">
+      <p>"I highly recommend this service. The customer support team is amazing and always helpful."</p>
+      <h4>- Nikhilesh Chatterjee</h4>
+    </div>
+  </div>
+  
+<!-- Contact Us Section -->
+<div class="container">
+    <h1>Contact Us</h1>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message"></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+</body>
+</html>
